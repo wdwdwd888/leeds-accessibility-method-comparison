@@ -1,0 +1,23 @@
+Analysis environment
+====================
+
+Operating system:
+macOS Darwin 24.6.0, arm64
+
+R:
+R version 4.5.1 (2025-06-13) -- "Great Square Root"
+
+Java used by r5r:
+Eclipse Temurin OpenJDK 21.0.12 LTS
+
+Primary R packages:
+data.table 1.17.8
+r5r 2.4.0
+sf 1.0-22
+ggplot2 4.0.0
+readxl 1.4.5
+
+The cumulative-accessibility script requests Java 21 on macOS using:
+/usr/libexec/java_home -v 21
+
+The r5r calculation was configured with a maximum Java heap of 12 GB.
