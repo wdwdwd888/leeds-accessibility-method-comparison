@@ -58,6 +58,9 @@ analysis[, `:=`(
   cumulative_60min_percentile = percentile_0_100(cumulative_60min_raw)
 )]
 
+# Preserve the harmonised table before adding the disagreement columns.
+analysis_ready <- copy(analysis)
+
 analysis[, `:=`(
   gap_dft_minus_ptal = dft_business_percentile - ptal_inspired_percentile,
   gap_dft_minus_cumulative =
@@ -117,7 +120,7 @@ top20 <- analysis[
   )
 ][1:20]
 
-fwrite(analysis, file.path(result_dir, "leeds_three_method_analysis_ready.csv"))
+fwrite(analysis_ready, file.path(result_dir, "leeds_three_method_analysis_ready.csv"))
 fwrite(analysis, file.path(result_dir, "leeds_three_method_analysis_with_gaps.csv"))
 fwrite(top20, file.path(result_dir, "leeds_three_method_disagreement_top20.csv"))
 fwrite(

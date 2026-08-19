@@ -74,7 +74,8 @@ for (dataset_name in names(datasets)) {
     stop(dataset_name, " is missing column(s): ", paste(missing_columns, collapse = ", "))
   }
 
-  missing_values <- colSums(is.na(datasets[[dataset_name]][, ..core_columns[[dataset_name]]]))
+  required <- core_columns[[dataset_name]]
+  missing_values <- colSums(is.na(datasets[[dataset_name]][, ..required]))
   if (any(missing_values > 0L)) {
     stop(dataset_name, " contains missing values in required columns.")
   }
