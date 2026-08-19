@@ -1,0 +1,26 @@
+LSOA21CD,LSOA21NM,jobs_accessible_30min_bus,jobs_accessible_45min_bus,jobs_accessible_60min_bus,plateau_type
+E01011266,Leeds 008A,800,800,800,same_nonzero
+E01011270,Leeds 008B,0,0,0,all_zero
+E01011279,Leeds 008C,300,300,300,same_nonzero
+E01011296,Leeds 030A,450,450,450,same_nonzero
+E01011297,Leeds 030B,0,0,0,all_zero
+E01011298,Leeds 088A,0,0,0,all_zero
+E01011299,Leeds 088B,600,600,600,same_nonzero
+E01011306,Leeds 089E,75,75,75,same_nonzero
+E01011311,Leeds 022A,350,350,350,same_nonzero
+E01011410,Leeds 057E,500,500,500,same_nonzero
+E01011419,Leeds 073D,50,50,50,same_nonzero
+E01011420,Leeds 069E,2250,2250,2250,same_nonzero
+E01011534,Leeds 106B,0,0,0,all_zero
+E01011554,Leeds 012A,300,300,300,same_nonzero
+E01011576,Leeds 007C,350,350,350,same_nonzero
+E01011580,Leeds 014D,200,200,200,same_nonzero
+E01011582,Leeds 003B,100,100,100,same_nonzero
+E01011589,Leeds 039B,300,300,300,same_nonzero
+E01011590,Leeds 039C,0,0,0,all_zero
+E01011636,Leeds 100D,1000,1000,1000,same_nonzero
+E01011650,Leeds 020A,450,450,450,same_nonzero
+E01011696,Leeds 006B,200,200,200,same_nonzero
+E01011700,Leeds 002B,5000,5000,5000,same_nonzero
+E01011708,Leeds 006D,175,175,175,same_nonzero
+E01032503,Leeds 007E,5000,5000,5000,same_nonzero

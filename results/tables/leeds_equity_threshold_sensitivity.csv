@@ -1,0 +1,10 @@
+need_definition,maximum_imd_decile,no_car_top_percentage,no_car_threshold,low_accessibility_cutoff,high_need_lsoas,low_dft,low_ptal,low_cumulative,low_under_any_method,low_under_all_methods
+Strict,2,20,43.3556789886995,20,71,0,8,0,8,0
+Strict,2,20,43.3556789886995,25,71,0,9,0,9,0
+Strict,2,20,43.3556789886995,30,71,0,11,0,11,0
+Main,3,25,40.7156225648447,20,99,0,12,3,14,0
+Main,3,25,40.7156225648447,25,99,1,13,3,15,0
+Main,3,25,40.7156225648447,30,99,1,17,4,20,0
+Broad,4,30,37.8282523220696,20,129,0,13,4,15,0
+Broad,4,30,37.8282523220696,25,129,2,14,4,16,1
+Broad,4,30,37.8282523220696,30,129,2,18,5,21,1
