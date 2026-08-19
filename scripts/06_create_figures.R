@@ -95,6 +95,15 @@ accessibility_long <- rbind(
     value = map_base$cumulative_45min_percentile)
 )
 
+accessibility_long$measure <- factor(
+  accessibility_long$measure,
+  levels = c(
+    "DfT Business",
+    "PTAL-inspired",
+    "Cumulative employment (45 min)"
+  )
+)
+
 accessibility_map <- ggplot(accessibility_long) +
   geom_sf(aes(fill = value), colour = "white", linewidth = 0.08) +
   facet_wrap(~measure, nrow = 1) +
@@ -122,6 +131,15 @@ gap_long <- rbind(
     comparison = "DfT Business - Cumulative", value = map_base$gap_dft_minus_cumulative),
   transform(map_base[, c("LSOA21CD", "geometry")],
     comparison = "PTAL-inspired - Cumulative", value = map_base$gap_ptal_minus_cumulative)
+)
+
+gap_long$comparison <- factor(
+  gap_long$comparison,
+  levels = c(
+    "DfT Business - PTAL-inspired",
+    "DfT Business - Cumulative",
+    "PTAL-inspired - Cumulative"
+  )
 )
 
 gap_limit <- max(abs(gap_long$value), na.rm = TRUE)
@@ -226,13 +244,33 @@ equity_map$map_category[
   equity_map$high_social_transport_need & equity_map$low_accessibility_method_count > 0
 ]
 
+equity_map$map_category <- factor(
+  equity_map$map_category,
+  levels = c(
+    "Other LSOAs",
+    "High need, no identified low access",
+    "PTAL only",
+    "Cumulative only",
+    "DfT + Cumulative",
+    "PTAL + Cumulative"
+  ),
+  labels = c(
+    "Other LSOAs (n = 389)",
+    "High need, no identified low access (n = 84)",
+    "PTAL only (n = 12)",
+    "Cumulative only (n = 1)",
+    "DfT + Cumulative (n = 1)",
+    "PTAL + Cumulative (n = 1)"
+  )
+)
+
 category_colours <- c(
-  "Other LSOAs" = "#E5E5E5",
-  "High need, no identified low access" = "#FDE725",
-  "PTAL only" = "#CC79A7",
-  "Cumulative only" = "#0072B2",
-  "DfT + Cumulative" = "#D55E00",
-  "PTAL + Cumulative" = "#009E73"
+  "Other LSOAs (n = 389)" = "#E5E5E5",
+  "High need, no identified low access (n = 84)" = "#FDE725",
+  "PTAL only (n = 12)" = "#CC79A7",
+  "Cumulative only (n = 1)" = "#0072B2",
+  "DfT + Cumulative (n = 1)" = "#D55E00",
+  "PTAL + Cumulative (n = 1)" = "#009E73"
 )
 
 equity_gap_map <- ggplot(equity_map) +
